@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="elektronska prijava ispita">
+    <meta name="keywords" content="eIndeks ocene">
+    <meta name="author" content="Group of students">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Studentski portal | eINDEKS </title>
+
+    <link rel="stylesheet" href="css_admin.css">
+
+
+</head>
+<body>
+
+    <header>
+        <div class="pmf">
+            <p><a href="https://www.pmf.kg.ac.rs/" style="text-decoration: none;color: white">PMF Kragujevac</a></p>
+        </div>
+        <div class="e">
+            <p>E - INDEKS </p>
+        </div>
+        <div class="ime">
+			<div class="dropdown">
+                <button class="dropbtn" > Admin &nbsp;  <img src="images/acc.png">  </button>
+				<div class="dropdown-content">
+
+					<a href="/indexlogin">Odjava</a>
+				</div>
+			</div>
+        </div>
+    </header>
+
+    
+        <div class="nav">
+            <ul>
+                <li><a href="/admin" class="curr">Pocetna strana</a></li>
+                <!--<li><a href="/ispiti">Ispiti </a></li>
+                <li><a href="/eprijava">E-prijava </a></li>
+                <li><a href="/predmeti">Predmeti </a></li>-->
+                <li><a href="/indeksregister">Dodaj studente </a></li>
+                <li><a href="/brisanje">Brisanje </a></li>
+               <!-- <li><a href="/dodajpredmete">Dodaj Predmete </a></li>-->
+                <li><a href="/dodajprofesore">Dodaj Profesore </a></li>
+                <li><a href="/ispisiprofesore">Prikazi profesore </a></li>
+                <li><a href="/updateprofesora"> update </a></li>
+            </ul>
+        </div>
+    
+
+    <div class="main">
+        <div class="Pocetna">
+           <p> Pocetna Strana</p>
+        </div>
+        <div class="account">
+            <div class="deo1">
+                <p>
+                Podaci o Adminu
+                </p>
+            </div>
+            <div class="klasa1"> 
+                <div> <p class="ime2" th:text="${ime} +' '  + ${prezime} ">Ime Prezime</p></div> <br>
+                <div><p><b>JMBG: </b></p>  <p th:text="${jmbg}"></p></div><br>
+                <div> <p><b>Mobilni telefon:</b> </p> <p th:text="${mobilni}"></p> <br>
+                    <div> <p><b>Fiksni:</b></p>  <p th:text="${fiksni}"> </p> <br>
+                <div class="klasa2">
+                  <a target="_blank" href="https://www.instagram.com/?hl=sr"> <img class="im1" src="images/insta.png"></a>
+                    <img  class="im2" src="images/face.png">
+                    <img  class="im3" src="images/wh.png">
+                    <img class="im4" src="images/tw.png">
+                </div>
+            </div>
+        </div>
+
+        <div class="vesti">
+            <div>
+                Vesti    
+            </div>
+
+    </div>
+
+    
+
+</body>
+
+</html>

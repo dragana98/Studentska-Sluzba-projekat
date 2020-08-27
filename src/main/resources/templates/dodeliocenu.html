@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="elektronska prijava ispita">
+    <meta name="keywords" content="eIndeks ocene">
+    <meta name="author" content="Group of students">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Studentski portal | eINDEKS </title>
+
+    <link rel="stylesheet" href="css_profesor.css">
+
+    <style>
+        .button{
+            background-color: #00e000;
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <header>
+        <div class="pmf">
+            <p><a href="https://www.pmf.kg.ac.rs/" style="text-decoration: none;color: white">PMF Kragujevac</a></p>
+        </div>
+        <div class="e">
+            <p>E - INDEKS </p>
+        </div>
+        <div class="ime">
+			<div class="dropdown">
+                <button class="dropbtn" > Profesor &nbsp;  <img src="images/acc.png">  </button>
+				<div class="dropdown-content">
+					<a href="/forgottenpassword">Promena lozinke</a>
+					<a href="/indexlogin">Odjava</a>
+				</div>
+			</div>
+        </div>
+    </header>
+
+    
+        <div class="nav">
+            <ul>
+                <li><a href="/profesor" class="curr">Pocetna strana</a></li>
+                <!--<li><a href="/ispisiprofesore">Ispisi profesore </a></li>-->
+                <li><a href="/ispisiprijave">Prikazi prijave </a></li>
+                <li><a href="/dajocenu">Dodela ocene </a></li>
+            </ul>
+        </div>
+    
+
+    <div class="main">
+        <div class="Pocetna">
+           <p> </p>
+        </div>
+        <div class="accountt">
+            <div class="deo1">
+                <p>
+                Dodeli ocene
+                </p>
+            </div>
+            <div class="klasa1">
+               
+                <table class="table table-bordered table-striped tabelaklasa" >
+                    <tr>
+                        <th>ID prijave</th>
+                        <th>Sifra predmeta</th>
+                        <th>Broj indeksa studenta</th>
+                        <th>espb</th>
+                        <th></th>
+                    </tr>
+                    <tr th:each="data : ${listaPrijava}">
+                        <td th:text="${data.idprijave}" class="odvoji"></td>
+                        <td th:text="${data.sifrapredmeta}" class="odvoji"></td>
+                        <td th:text="${data.brindeksa} "class=odvoji></td>
+                        <td th:text="${data.espb}" class="odvoji"></td>
+                        <td>
+                            <form th:action="@{/dodeliocenu/(idprijave=${data.idprijave})}" th:object="${gotoviIspitiDTO}" method="post">
+                                <button class="button" type="submit" name="submit" >&nbsp OCENA &nbsp</button>
+                            </form>
+
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+
+       
+    
+
+</body>
+
+</html>

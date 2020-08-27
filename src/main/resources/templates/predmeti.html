@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="elektronska prijava ispita">
+    <meta name="keywords" content="eIndeks ocene">
+    <meta name="author" content="Group of students">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Studentski portal | eINDEKS </title>
+
+    <link rel="stylesheet" href="css1.css">
+
+</head>
+<body>
+
+    <header>
+        <div class="pmf">
+            <p><a href="https://www.pmf.kg.ac.rs/" style="text-decoration: none;color: white">PMF Kragujevac</a></p>
+        </div>
+        <div class="e">
+            <p>E - INDEKS </p>
+        </div>
+	<div class="ime">
+        <div class="dropdown">
+            <button class="dropbtn" th:text="${ime} + ' ' + ${prezime}" style="position: relative; left: -40px" ></button>
+            <img src="images/acc.png" style="float:right; position: relative; bottom: 4px; left: 20px;">  <!-- th:text="${ime} + ' ' + ${prezime}" -->
+            <div class="dropdown-content">
+                <a href="/forgottenpassword">Promena lozinke</a>
+                <a href="/indexlogin">Odjava</a>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    
+        <div class="nav">
+            <ul>
+                <li><a href="/index" class="curr">Pocetna strana</a></li>
+                <li><a href="/ispiti">Ispiti </a></li>
+                <li><a href="/eprijava">E-prijava </a></li>
+                <li><a href="/predmeti">Predmeti </a></li>
+                <li><a href="/finansije">Finansije </a></li>
+            </ul>
+        </div>
+    
+
+    <div class="main">
+        <div class="predmeti">
+           <p>Predmeti / Upisani predmeti</p>
+        </div>
+        <div class="upisani">
+            <div class="deo11">
+                <p>
+                Spisak upisanih predmeta u školskoj 2019/2020 godini
+                </p>
+<br>
+<br>
+<table>
+<thead>
+<tr>
+<th class="th">Broj predmeta</th>
+<th class="th">Šifra predmeta</th>
+<th class="th">Predmet</th>
+<th class="th">ESPB</th>
+<th class="th">Broj polaganja</th>
+<th class="th">Položen</th>
+</tr>
+</thead>
+<tbody style="vertical-align: middle;">
+<tr style="color:#006400;">
+<td class="td">1558</td>
+<td class="td">MI111</td>
+<td class="td">Praktikum iz OOP-a</td>
+<td class="td">6.00</td>
+<td class="td">0</td>
+<td style="text-align: center; vertical-align: middle;background-color:#FFF5EE;background-color: transparent;color:red;"><b>NE</b></td>
+</tr>
+<tr style="color : #006400;">
+<td class="td">1587</td>
+<td class="td">M165</td>
+<td class="td">KWT</td>
+<td class="td">6.00</td>
+<td class="td">1</td>
+<td style="text-align: center; vertical-align: middle;background-color:#FFF5EE;background-color: transparent;color : red;"><b>DA</b></td>
+</tr>
+<tr style="color : #006400;">
+<td class="td">1585</td>
+<td class="td">M164</td>
+<td class="td">OOP</td>
+<td class="td">7.00</td>
+<td class="td">0</td>
+<td style="text-align: center; vertical-align: middle;background-color:#FFF5EE;background-color: transparent;color : red;"><b>NE</b></td>
+</tr>
+<tr style="color : #006400;">
+<td class="td">1584</td>
+<td class="td">M166</td>
+<td class="td">Računarske mreže</td>
+<td class="td">6.00</td>
+<td class="td">0</td>
+<td style="text-align: center; vertical-align: middle;background-color:#FFF5EE;background-color: transparent;color : red;"><b>NE</b></td>
+</tr>
+<tr style="color : #006400;">
+<td class="td">1333</td>
+<td class="td">M146</td>
+<td class="td">Engleski jezik B2</td>
+<td class="td">5.00</td>
+<td class="td">1</td>
+<td style="text-align: center; vertical-align: middle;background-color:#FFF5EE;background-color: transparent;color : red;"><b>DA</b></td>
+</tr>
+<tr style="color : #006400;">
+<td class="td">1582</td>
+<td class="td">M160</td>
+<td class="td">SPA 2</td>
+<td class="td">6.00</td>
+<td class="td">0</td>
+<td style="text-align: center; vertical-align: middle;background-color:#FFF5EE;background-color: transparent;color : red;"><b>NE</b></td>
+</tr>
+<tr style="color : #006400;">
+<td class="td">1581</td>
+<td class="td">M162</td>
+<td class="td">Baze podataka</td>
+<td class="td">7.00</td>
+<td class="td">0</td>
+<td style="text-align: center; vertical-align: middle;background-color:#FFF5EE;background-color: transparent;color : red;"><b>NE</b></td>
+</tr>
+<tr style="color : #006400;">
+<td class="td">1580</td>
+<td class="td">M163</td>
+<td class="td">Operativni sistemi</td>
+<td class="td">6.00</td>
+<td class="td">0</td>
+<td style="text-align: center; vertical-align: middle;background-color:#FFF5EE;background-color: transparent;color : red;"><b>NE</b></td>
+</tr>
+<tr style="color : #006400;">
+<td class="td">1583</td>
+<td class="td">MI109</td>
+<td class="td">Vizuelizacija i analiza podataka</td>
+<td class="td">5.00</td>
+<td class="td">1</td>
+<td style="text-align: center; vertical-align: middle;background-color:#FFF5EE;background-color: transparent;color : red;"><b>DA</b></td>
+</tr>
+<tr style="color : #006400;">
+<td class="td">1591</td>
+<td class="td">K109</td>
+<td class="td">Psihologija</td>
+<td class="td">4.00</td>
+<td class="td">1</td>
+<td style="text-align: center; vertical-align: middle;background-color:#FFF5EE;background-color: transparent;color : red;"><b>DA</b></td>
+</tr>
+<tr style="color : #006400;">
+<td class="td"></td>
+<td class="td"></td>
+<td class="td"></td>
+<td class="td"></td>
+<td class="td"></td>
+<td style="text-align: center; vertical-align: middle;background-color:#FFF5EE;background-color: transparent;color : red;"><b></b></td>
+</tr>
+<tr style="color : #006400;">
+<td class="td"></td>
+<td class="td"></td>
+<td class="td"></td>
+<td class="td"></td>
+<td class="td"></td>
+<td style="text-align: center; vertical-align: middle;background-color:#FFF5EE;background-color: transparent;color : red;"><b></b></td>
+</tr>
+</tbody>
+</table>
+</div>					  
+    
+
+</body>
+
+</html>

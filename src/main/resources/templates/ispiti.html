@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="elektronska prijava ispita">
+    <meta name="keywords" content="eIndeks ocene">
+    <meta name="author" content="Group of students">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Studentski portal | eINDEKS </title>
+
+    <link rel="stylesheet" href="css1.css">
+
+</head>
+<body>
+
+    <header>
+        <div class="pmf">
+            <p><a href="https://www.pmf.kg.ac.rs/" style="text-decoration: none;color: white">PMF Kragujevac</a></p>
+        </div>
+        <div class="e">
+            <p>E - INDEKS </p>
+        </div>
+	<div class="ime">
+        <div class="dropdown">
+            <button class="dropbtn" th:text="${ime} + ' ' + ${prezime}" style="position: relative; left: -40px" ></button>
+            <img src="images/acc.png" style="float:right; position: relative; bottom: 4px; left: 20px;">  <!-- th:text="${ime} + ' ' + ${prezime}" -->
+            <div class="dropdown-content">
+                <a href="/forgottenpassword">Promena lozinke</a>
+                <a href="/indexlogin">Odjava</a>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    
+        <div class="nav">
+            <ul>
+                <li><a href="/index" class="curr">Pocetna strana</a></li>
+                <li><a href="/ispiti">Ispiti </a></li>
+                <li><a href="/eprijava">E-prijava </a></li>
+                <li><a href="/predmeti">Predmeti </a></li>
+                <li><a href="/finansije">Finansije </a></li>
+            </ul>
+        </div>
+    
+
+    <div class="main1">
+        <div class="ispiti">
+           <p>Ispiti </p>
+        </div>
+        <div class="polozeni">
+            <div class="deo11">
+                <p>
+                Spisak položenih ispita
+                </p>
+<br>
+<br>
+<br>
+<table>
+<thead>
+<tr>
+<th class="th">Broj predmeta</th>
+<th class="th">Šifra predmeta</th>
+<th class="th">Predmet</th>
+<th class="th">GS</th>
+<th class="th">TP</th>
+<th class="th">ŠG</th>
+<th class="th">Ispitni rok</th>
+<th class="th">Datum</th>
+<th class="th">Ocena</th>
+<th class="th">ESPB</th>
+<th class="th">Ispitivač</th>
+</tr>
+</thead>
+<tbody style="vertical-align: middle;">
+<tr style="color : #006400;">
+<td class="td">1587</td>
+<td class="td">M165</td>
+<td class="td">KWT</td>
+<td class="td">II</td>
+<td class="td">O</td>
+<td class="td">2019/2020</td>
+<td class="td">JUN</td>
+<td class="td">10.06.2020</td>
+<td class="td">8</td>
+<td class="td">6.00</td>
+<td class="td">Vladimir Cvjetković</td>
+</tr>
+<tr style="color : #006400;">
+<td class="td">1333</td>
+<td class="td">M146</td>
+<td class="td">Engleski jezik B2</td>
+<td class="td">II</td>
+<td class="td">I</td>
+<td class="td">2019/2020</td>
+<td class="td">JUN</td>
+<td class="td">15.06.2020</td>
+<td class="td">9</td>
+<td class="td">5.00</td>
+<td class="td">Ljiljana Vukićević-Đorđević</td>
+</tr>
+<tr style="color : #006400;">
+<td class="td">1583</td>
+<td class="td">MI109</td>
+<td class="td">Vizuelizacija i analiza podataka</td>
+<td class="td">II</td>
+<td class="td">I</td>
+<td class="td">2019/2020</td>
+<td class="td">JUN</td>
+<td class="td">22.06.2020</td>
+<td class="td">7</td>
+<td class="td">5.00</td>
+<td class="td">Marinko Timotijević</td>
+</tr>
+<tr style="color : #006400;">
+<td class="td">1591</td>
+<td class="td">K109</td>
+<td class="td">Psihologija</td>
+<td class="td">II</td>
+<td class="td">I</td>
+<td class="td">2019/2020</td>
+<td class="td">FEBRUAR</td>
+<td class="td">15.02.2020</td>
+<td class="td">8</td>
+<td class="td">4.00</td>
+<td class="td">Darko Hinić</td>
+</tr>
+<tr style="color : #006400;">
+<td class="td"></td>
+<td class="td"></td>
+<td class="td"></td>
+<td class="td"></td>
+<td class="td"></td>
+<td class="td"></td>
+<td class="td"></td>
+<td class="td"></td>
+<td class="td"></td>
+<td class="td"></td>
+<td class="td"></td>
+</tr>
+</tbody>
+</table>
+</div>
+ <div class="polozeni2">
+            <div class="deo11">
+                <p>
+                Prijave ispita
+                </p>
+<br>
+<br>
+<br>
+<table>
+<thead>
+<tr>
+<th class="th">Predmet</th>
+<th class="th">GS</th>
+<th class="th">ŠG, Ispitni rok</th>
+<th class="th">Broj polaganja</th>
+<th class="th">Cena</th>
+<th class="th">Datum</th>
+<th class="th">Ocena</th>
+<th class="th">ESPB</th>
+<th class="th">Ispitivač</th>
+</tr>
+</thead>
+<tbody style="vertical-align: middle;">
+<tr style="color : #006400;">
+<td class="td">KWT</td>
+<td class="td">II</td>
+<td class="td">2019/2020, JUN</td>
+<td class="td">1</td>
+<td class="td">1000</td>
+<td class="td">10.06.2020</td>
+<td class="td">8</td>
+<td class="td">6.00</td>
+<td class="td">Vladimir Cvjetković</td>
+</tr>
+<tr style="color : #006400;">
+<td class="td">Engleski jezik B2</td>
+<td class="td">II</td>
+<td class="td">2019/2020, JUN</td>
+<td class="td">1</td>
+<td class="td">1000</td>
+<td class="td">15.06.2020</td>
+<td class="td">9</td>
+<td class="td">5.00</td>
+<td class="td">Ljiljana Vukićević-Đorđević</td>
+</tr>
+<tr style="color : #006400;">
+<td class="td">Vizuelizacija i analiza podataka</td>
+<td class="td">II</td>
+<td class="td">2019/2020, JUN</td>
+<td class="td">1</td>
+<td class="td">1000</td>
+<td class="td">22.06.2020</td>
+<td class="td">7</td>
+<td class="td">5.00</td>
+<td class="td">Marinko Timotijević</td>
+</tr>
+<tr style="color : #006400;">
+<td class="td">Psihologija</td>
+<td class="td">II</td>
+<td class="td">2019/2020, FEBRUAR</td>
+<td class="td">1</td>
+<td class="td">1000</td>
+<td class="td">15.02.2020</td>
+<td class="td">8</td>
+<td class="td">4.00</td>
+<td class="td">Darko Hinić</td>
+</tr>
+<tr style="color : #006400;">
+<td class="td"></td>
+<td class="td"></td>
+<td class="td"></td>
+<td class="td"></td>
+<td class="td"></td>
+<td class="td"></td>
+<td class="td"></td>
+<td class="td"></td>
+<td class="td"></td>
+</tr>
+</tbody>
+</table>
+</div>				  
+    
+
+</body>
+</html>

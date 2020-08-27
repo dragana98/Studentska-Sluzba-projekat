@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="elektronska prijava ispita">
+    <meta name="keywords" content="eIndeks ocene">
+    <meta name="author" content="Group of students">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Studentski portal | eINDEKS </title>
+
+    <link rel="stylesheet" href="css_profesor.css">
+
+
+</head>
+<body>
+
+    <header>
+        <div class="pmf">
+            <p><a href="https://www.pmf.kg.ac.rs/" style="text-decoration: none;color: white">PMF Kragujevac</a></p>
+        </div>
+        <div class="e">
+            <p>E - INDEKS </p>
+        </div>
+        <div class="ime">
+			<div class="dropdown">
+                <button class="dropbtn" > Profesor &nbsp;  <img src="images/acc.png">  </button>
+				<div class="dropdown-content">
+					<a href="/forgottenpassword">Promena lozinke</a>
+					<a href="/indexlogin">Odjava</a>
+				</div>
+			</div>
+        </div>
+    </header>
+
+    
+        <div class="nav">
+            <ul>
+                <li><a href="/profesor" class="curr">Pocetna strana</a></li>
+                <!--<li><a href="/ispisiprofesore">Ispisi profesore </a></li>-->
+                <!--<li><a href="/predmeti">Predmeti </a></li> -->
+                <li><a href="/ispisiprijave">Prikazi prijave </a></li>
+                <li><a href="/dajocenu">Dodela ocene </a></li>
+            </ul>
+        </div>
+    
+
+    <div class="main">
+        <div class="Pocetna">
+           <p> Pocetna Strana</p>
+        </div>
+        <div class="account">
+            <div class="deo1">
+                <p>
+                Podaci o Profesoru
+                </p>
+            </div>
+            <div class="klasa1"> 
+                <p class="ime2" th:text="${ime}+' '+${prezime}">Ime Prezime</p> <br>
+                <p th:text="${idpredavaca}">id (id)</p> <br>
+                <p>Kontakti:</p> <br>
+                <div class="klasa2">
+                  <a target="_blank" href="https://www.instagram.com/?hl=sr"> <img class="im1" src="images/insta.png"></a>
+                    <img  class="im2" src="images/face.png">
+                    <img  class="im3" src="images/wh.png">
+                    <img class="im4" src="images/tw.png">
+                </div>
+            </div>
+        </div>
+<!--
+        <div class="podaci">
+            <div class="d1"> <p>Studije</p><p> w</p></div> <br>
+            <div class="d2"><p>Studijski program</p><p> w</p></div> <br>
+             <div class="d3"> <p>Centar</p><p> w</p></div> <br>
+            <div class="d4"> <p>Prosek</p><p> w</p></div> <br>
+            <div class="d5"><p>Status</p><p> w</p></div> <br>
+            <div class="d6"> <p>Plan i program</p><p> w</p></div> <br>
+            <div class="d7"> <p>Godina upisa</p><p> w</p></div> <br>
+            <div class="d8"><p>Godina studija</p><p> w</p></div> <br>
+            <div class="d9"> <p>Upisan semestar</p><p> w</p></div> <br>
+            <div class="d10"> <p>ESPB</p><p>w</p></div> 
+        </div>
+ -->
+        <div class="vesti">
+            <div>
+                Vesti    
+            </div>
+
+    </div>
+
+    
+
+</body>
+
+</html>

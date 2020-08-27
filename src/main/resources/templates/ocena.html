@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="elektronska prijava ispita">
+    <meta name="keywords" content="eIndeks ocene">
+    <meta name="author" content="Group of students">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Studentski portal | eINDEKS </title>
+
+    <link rel="stylesheet" href="css_profesor.css">
+
+
+</head>
+<body>
+
+    <header>
+        <div class="pmf">
+            <p><a href="https://www.pmf.kg.ac.rs/" style="text-decoration: none;color: white">PMF Kragujevac</a></p>
+        </div>
+        <div class="e">
+            <p>E - INDEKS </p>
+        </div>
+        <div class="ime">
+			<div class="dropdown">
+                <button class="dropbtn" > Profesor &nbsp;  <img src="images/acc.png">  </button>
+				<div class="dropdown-content">
+					<a href="/forgottenpassword">Promena lozinke</a>
+					<a href="/indexlogin">Odjava</a>
+				</div>
+			</div>
+        </div>
+    </header>
+
+    
+        <div class="nav">
+            <ul>
+                <li><a href="/profesor" class="curr">Pocetna strana</a></li>
+                <!--<li><a href="/ispisiprofesore">Ispisi profesore </a></li>-->
+                <li><a href="/ispisiprijave">Prikazi prijave </a></li>
+                <li><a href="/dajocenu">Dodela ocene </a></li>
+            </ul>
+        </div>
+    
+
+    <div class="main">
+        <div class="Pocetna">
+           <p> </p>
+        </div>
+        <div class="accountt">
+            <div class="deo1">
+                <p>
+             Ocena
+                </p>
+            </div>
+            <div class="klasa1">
+               
+                <form th:action="@{/potvrdiocenu}" th:object="${ocenaDTO}" method="post">
+                       
+                    <label for="ocena">Ocena: </label><br>
+                    <input type="text" id="ocena" name="ocena" th:field="*{ocena}"><br>
+
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn" id="btn">
+                            Potvrda
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+        
+<!--===============================================================================================-->
+<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+<script src="vendor/bootstrap/js/popper.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+<script src="vendor/daterangepicker/moment.min.js"></script>
+<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+<script src="js/main.js"></script>
+       
+    
+
+</body>
+
+</html>

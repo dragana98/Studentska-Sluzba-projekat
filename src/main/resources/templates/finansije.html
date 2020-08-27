@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="elektronska prijava ispita">
+    <meta name="keywords" content="eIndeks ocene">
+    <meta name="author" content="Group of students">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Studentski portal | eINDEKS </title>
+
+    <link rel="stylesheet" href="css1.css">
+
+    <style>
+        .sec1{
+            width:500px;
+            margin: auto;
+            align-items: center;
+        }
+      
+        .sec2{
+            text-align: center;
+        }
+        .account2{
+            background-color: rgb(244, 198, 255);
+            width: 90%;
+            border-radius: 10px;
+            margin: 35px auto;
+            height: 120vh;
+
+        }
+        .main{
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 40px;
+            width: 81%;
+            height: 140vh;  
+            border-radius: 0 0 10px 10px;
+
+            background-color: rgb(255, 235, 251);
+        }
+
+        #stanje-na-racunu{
+            font-size: 30px;
+        }
+       
+    </style>
+
+
+</head>
+<body>
+
+    <header>
+        <div class="pmf">
+            <p><a href="https://www.pmf.kg.ac.rs/" style="text-decoration: none;color: white">PMF Kragujevac</a></p>
+        </div>
+        <div class="e">
+            <p>E - INDEKS </p>
+        </div>
+		
+        <div class="ime">
+            <div class="dropdown">
+                <button class="dropbtn" th:text="${ime} + ' ' + ${prezime}" style="position: relative; left: -40px" ></button>
+                <img src="images/acc.png" style="float:right; position: relative; bottom: 4px; left: 20px;">
+                <div class="dropdown-content">
+                    <a href="/forgottenpassword">Promena lozinke</a>
+                    <a href="/indexlogin">Odjava</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    
+        <div class="nav">
+            <ul>
+                <li><a href="/index">Pocetna strana</a></li>
+                <li><a href="/ispiti" class="curr">Ispiti </a></li>
+                <li><a href="/eprijava">E-prijava </a></li>
+                <li><a href="/predmeti">Predmeti </a></li>
+                <li><a href="/finansije">Finansije </a></li>
+            </ul>
+        </div>
+    
+
+    <div class="main">
+        <div class="Pocetna">
+           <p></p>
+        </div>
+        <div class="account2">
+                <div class="deo1">
+                    <p>
+                    Finansije
+                    </p>
+                </div>
+                <div class="klasa1"> 
+                        
+                     <div class="sec1">    
+                         <p  id="stanje-na-racunu" th:text="'Stanje na racunu:  '+ ${finansije} + ' Din.'">Stanje na racunu: </p>
+                         <br>
+
+                        <div class="sec2">
+                
+
+                         </div>
+                    </div>
+                    </div>
+        </div>
+
+    </div>
+
+    
+
+</body>
+
+</html>

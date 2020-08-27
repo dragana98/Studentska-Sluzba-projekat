@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="elektronska prijava ispita">
+    <meta name="keywords" content="eIndeks ocene">
+    <meta name="author" content="Group of students">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Studentski portal | eINDEKS </title>
+
+    <link rel="stylesheet" href="css1.css">
+
+    <style>
+
+    </style>
+
+</head>
+<body>
+
+    <header>
+        <div class="pmf">
+            <p><a href="https://www.pmf.kg.ac.rs/" style="text-decoration: none;color: white">PMF Kragujevac</a></p>
+        </div>
+        <div class="e">
+            <p>E - INDEKS </p>
+        </div>
+        <div class="ime">
+			<div class="dropdown">
+                <button class="dropbtn" th:text="${imeosobe} + ' ' + ${prezimeosobe}" style="position: relative; left: -40px" ></button>
+                <img src="images/acc.png" style="float:right; position: relative; bottom: 4px; left: 20px;">  <!-- th:text="${ime} + ' ' + ${prezime}" -->
+				<div class="dropdown-content">
+					<a href="/forgottenpassword">Promena lozinke</a>
+					<a href="/indexlogin">Odjava</a>
+				</div>
+			</div>
+        </div>
+    </header>
+
+    
+        <div class="nav">
+            <ul>
+                <li><a href="/index" class="curr">Pocetna strana</a></li>
+                <li><a href="/ispiti">Ispiti </a></li>
+                <li><a href="/eprijava">E-prijava </a></li>
+                <li><a href="/predmeti">Predmeti </a></li>
+                <li><a href="/finansije">Finansije </a></li>
+            </ul>
+        </div>
+    
+
+    <div class="main">
+        <div class="Pocetna">
+           <p> Pocetna Strana</p>
+        </div>
+        <div class="account">
+            <div class="deo1">
+                <p>
+                Podaci o studentu
+                </p>
+            </div>
+            <div class="klasa1"> 
+                <p class="ime2" th:text="${imeosobe}+' '+${prezimeosobe}">Ime   Prezime</p> <br>
+                <p th:text="${index}"> </p> <br>
+                <p th:text="${jmbg}"></p> <br>
+                <p th:text="${email}">e-mail: (email)</p> <br>
+                <p th:text="${mobilni}">Mobilni telefon: (broj)</p>  <br>
+                <p th:text="${fiksni}">Fiksni: (fiksni)</p> <br>
+                <div class="klasa2">
+                  <a target="_blank" href="https://www.instagram.com/?hl=sr"> <img class="im1" src="images/insta.png"></a>
+                    <img  class="im2" src="images/face.png">
+                    <img  class="im3" src="images/wh.png">
+                    <img class="im4" src="images/tw.png">
+                </div>
+            </div>
+        </div>
+
+        <div class="podaci">
+            <div class="d1"> <p>Studije</p><p> OAS</p></div> <br>
+            <div class="d2"><p> Studijski program</p><p> Informatika</p></div> <br>
+            <div class="d4"> <p>Prosek</p><p th:text="${prosek}"> w</p></div> <br>
+            <div class="d10"> <p>ESPB</p><p th:text="${espb}">w</p></div>
+        </div>
+
+        <div class="vesti">
+            <div>
+                Vesti    
+            </div>
+
+            <div>
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+    
+
+</body>
+
+</html>

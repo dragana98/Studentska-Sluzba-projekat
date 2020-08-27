@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="elektronska prijava ispita">
+    <meta name="keywords" content="eIndeks ocene">
+    <meta name="author" content="Group of students">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Studentski portal | eINDEKS </title>
+
+    <link rel="stylesheet" href="css_admin.css">
+
+    <style>
+        .sec1{
+            width:500px;
+            margin: auto;
+            align-items: center;
+        }
+
+        .sec2{
+            text-align: center;
+        }
+        .account2{
+            background-color:   rgb(160, 226, 195);
+            width: 90%;
+            border-radius: 10px;
+            margin: 35px auto;
+            height: 50vh;
+
+        }
+        .main{
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 40px;
+            width: 81%;
+            height: 70vh;
+            border-radius: 0 0 10px 10px;
+
+            background-color: rgb(243, 255, 235);
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+<header>
+    <div class="pmf">
+        <p>PMF Kragujevac</p>
+    </div>
+    <div class="e">
+        <p>E - INDEKS </p>
+    </div>
+    <div class="ime">
+        <div class="dropdown">
+            <button class="dropbtn" > Admin  <img src="images/acc.png"> </button>
+            <div class="dropdown-content">
+
+                <a href="/indexlogin">Odjava</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<div class="nav">
+    <ul>
+        <li><a href="/admin">Pocetna strana</a></li>
+       <!-- <li><a href="/ispiti">Ispiti </a></li>
+        <li><a href="/eprijava">E-prijava </a></li>
+        <li><a href="/predmeti">Predmeti </a></li>
+        <li><a href="/finansije">Finansije </a></li>-->
+        <li><a href="/indeksregister" class="curr">Dodaj studente</a></li>
+        <li><a href="/brisanje">Brisanje </a></li>
+        <!--<li><a href="/dodajpredmete">Dodaj Predmete </a></li>-->
+        <li><a href="/dodajprofesore">Dodaj Profesore </a></li>
+        <li><a href="/ispisiprofesore">Prikazi profesore </a></li>
+        <li><a href="/updateprofesora"> update </a></li>
+    </ul>
+</div>
+
+
+<div class="main">
+    <div class="Pocetna">
+        <p></p>
+    </div>
+    <div class="account2">
+        <div class="deo1">
+            <p>
+                Registracija
+            </p>
+        </div>
+        <div class="klasa1">
+
+            <div class="sec1">
+
+                <div class="sec2">
+                   <form th:action="@{/dodelapredmeta}" th:object="${predmetiPrijavaDTO}" method="post">
+                       
+                        <label for="sifrapredmeta">Sifra predmeta:</label><br>
+                        <input type="text" id="sifrapredmeta" name="sifrapredmeta" th:field="*{sifrapredmeta}"><br>
+                       <label for="naziv">Naziv predmeta:</label><br>
+                       <input type="text" id="naziv" name="nazivpredmeta" th:field="*{nazivpredmeta}"><br>
+                        <label for="espb">espb:</label><br>
+                        <input type="text" id="espb" name="espb" th:field="*{espb}"><br>
+                      <!--  <label for="idpredavaca">ID predavaca:</label><br>
+                        <input type="text" id="idpredavaca" name="idpredavaca" th:field="*{idpredavaca}"><br>-->
+                       <br>
+
+                        <div class="container-login100-form-btn">
+                            <button class="login100-form-btn" id="btn">
+                                Potvrda
+                            </button>
+                        </div>
+
+                       <br>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+
+<!--===============================================================================================-->
+<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+<script src="vendor/bootstrap/js/popper.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+<script src="vendor/daterangepicker/moment.min.js"></script>
+<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+<script src="js/main.js"></script>
+
+
+
+</body>
+
+</html>
