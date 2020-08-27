@@ -1,0 +1,454 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    width: 100%;
+    height: 60px;
+    background-color: rgb(165, 0, 165);
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 0 9px 0 black;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+body{
+    font-family:  Helvetica;
+    background-color: rgb(244, 198, 255);
+}
+
+.pmf {
+    float:left;
+    font-size: 20px;
+    font-weight: normal;
+    margin: 17px 0 0 30px;
+    text-shadow: 1px 1px black;
+
+}
+
+.e{
+    text-align: center;
+    margin: auto;
+    width: 200px;
+    font-size: 25px;
+}
+
+.e p{
+    padding-top: 15px;
+    text-shadow: 2px 2px black;
+}
+
+.ime{
+    float: right;
+    font-weight: normal;
+    font-size: 20px;
+    margin-right:80px ;
+    margin-top: -30px;
+    padding: 5px;
+    text-shadow: 1px 1px black;
+}
+
+.ime img{
+
+    width: 35px;
+    position: relative;
+    z-index: 1;
+    left:10px;
+    bottom:-10px;
+}
+
+.dropbtn {
+	background-color:  rgb(165, 0, 165);
+	color: white;
+	cursor: pointer;
+	font-size: 20px;  
+	border: none;
+	outline: none;
+	color: white;
+	padding: 14px 16px;
+	margin-top: -30px;
+	margin-right: -60px;
+	
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(197, 93, 197);	
+  min-width: 160px;
+  z-index: 1;
+  margin-bottom: 150px;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  text-shadow: 2px 1px rgb(78, 78, 78);
+}
+
+.dropdown-content a:hover {
+	background-color: rgba(218, 28, 208, 0.733);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/*  NAVIGACIJA */ 
+
+.nav{
+    width: 80%;
+    height: 50px;
+    font-family: Helvetica;
+    text-shadow: 1px 2px rgb(103, 0, 199);
+    margin: 30px auto 0 auto;
+    background-image: linear-gradient(to top, rgb(225, 36, 231),rgb(239, 71, 245),rgb(250, 96, 255),rgb(249, 64, 255),rgb(234, 54, 240));
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+    padding:10px;
+    font-weight: bold;
+
+}
+
+.nav a{
+    text-decoration: none;
+    color:white;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    letter-spacing: 1px;
+    overflow: hidden;
+    transition: 0.2s;
+} 
+.nav ul{
+    margin:15px;
+    padding: 0;
+    list-style-type: none;
+}
+
+.nav li{
+    display: inline-block;
+    
+}
+
+.nav a:hover{
+    background-color:  rgba(218, 28, 208, 0.733);
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(226, 43, 217, 0.541), 0 0 30px rgba(226, 43, 217, 0.541),0 0 45px rgba(226, 43, 217, 0.541);
+    /*transition-delay: 0.2s; */ 
+
+}
+
+
+/*   MAIN */
+
+.main{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    width: 81%;
+    height: 130vh;
+    border-radius: 0 0 10px 10px;
+
+    background-color: rgb(255, 235, 251);
+}
+
+.predmeti p{
+    font-size: 22px;
+    margin: 0px auto 10px 20px;
+    padding-top: 10px;
+
+}
+
+.upisani{
+    background-color: rgb(244, 198, 255);
+    width: 90%;
+    border-radius: 10px;
+    margin: 35px auto;
+    height: 100vh;
+}
+
+.main1{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    width: 81%;
+    height: 350vh;  
+    border-radius: 0 0 10px 10px;
+
+    background-color: rgb(255, 235, 251);
+}
+.ispiti p{
+    font-size: 22px;
+    margin: 0px auto 10px 20px;
+    padding-top: 10px;
+
+}
+
+.polozeni{
+    background-color: rgb(244, 198, 255);
+    width: 90%;
+    border-radius: 10px;
+    margin: 35px auto;
+    height: 100vh;
+    
+
+}
+.polozeni2 {
+    background-color: rgb(244, 198, 255);
+    border-radius: 10px;
+    margin:700px auto;
+    height: 100vh;
+
+}
+
+.Pocetna p{
+    font-size: 22px;
+    margin: 0px auto 10px 20px;
+    padding-top: 10px;
+
+}
+
+.account{
+    background-color: rgb(244, 198, 255);
+    width: 90%;
+    border-radius: 10px;
+    margin: 35px auto;
+    height: 50vh;
+    
+
+}
+
+
+.accountw{
+
+    background-color: rgb(244, 198, 255);
+    width: 90%;
+    border-radius: 10px;
+    margin: 35px auto;
+    height: 60vh;
+
+}
+
+.accounttt{
+
+    background-color: rgb(244, 198, 255);
+    width: 90%;
+    border-radius: 10px;
+    margin: 35px auto;
+    height: 70vh;
+
+}
+
+.deo1{
+    background-color: rgb(197, 93, 197);
+    width: 40%;
+    height: 40px;
+    border-radius: 10px 10px;
+    margin: auto;
+    position: relative;
+    top:-20px;
+    text-align: center;
+
+    border: 2px solid rgb(253, 219, 255);
+}
+
+.deo11{
+    background-color: rgb(197, 93, 197);
+    width: 100%;
+    height: 40px;
+    border-radius: 10px 10px;
+    margin: auto;
+    position: relative;
+    top:-20px;
+    text-align: center;
+    border: 2px solid rgb(253, 219, 255);
+}
+
+.deo1 p{
+    color: white;
+    padding-top: 7px;
+    font-size: 20px;
+    text-shadow: 2px 1px rgb(78, 78, 78);
+}
+.deo11 p{
+    color: white;
+    padding-top: 7px;
+    font-size: 20px;
+    text-shadow: 2px 1px rgb(78, 78, 78);
+}
+
+
+.klasa2 .im1{
+    width: 30px;
+
+}
+.klasa2 .im2{
+    width:40px;
+    position: relative;
+    top:4px;
+}
+
+.klasa1{
+    
+    padding-top: 25px;
+    text-align: center;
+    font-size: 18px;
+
+}
+
+.klasa1 .ime2{
+
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.im3{
+    width:30px;
+}
+.im4{
+    width: 30px;
+}
+
+/*  drugi deo       */
+
+.podaci{
+    background-color: rgb(244, 198, 255);
+    width: 81%;
+    border-radius: 10px;
+    margin: 10px auto;
+    height: 30vh;
+    font-size: 19px;
+    padding:  29px 60px;
+}
+
+
+.d1{
+    display: flex;
+    border-bottom: 1px solid rgb(117, 116, 116);
+}
+.d1 p{margin-left: 3px; margin-right: 400px;}
+
+.d2{
+    display: flex;
+    
+    border-bottom: 1px solid rgb(117, 116, 116);
+}
+.d2 p{margin-left: 3px; margin-right: 310px;}
+.d3{
+    display: flex;
+    
+    border-bottom: 1px solid rgb(117, 116, 116);
+}
+.d3 p{margin-left: 3px; margin-right: 400px;}
+.d4{
+    display: flex;
+    
+    border-bottom: 1px solid rgb(117, 116, 116);
+}
+.d4 p{margin-left: 3px; margin-right: 400px;}
+.d5{
+    display: flex;
+    
+    border-bottom: 1px solid rgb(117, 116, 116);
+}
+.d5 p{margin-left: 3px; margin-right: 403px;}
+.d6{
+    display: flex;
+    
+    border-bottom: 1px solid rgb(117, 116, 116);
+}
+.d6 p{margin-left: 3px; margin-right: 340px;}
+.d7{
+    display: flex;
+    
+    border-bottom: 1px solid rgb(117, 116, 116);
+}
+.d7 p{margin-left: 3px; margin-right: 350px;}
+.d8{
+    display: flex;
+    
+    border-bottom: 1px solid rgb(117, 116, 116);
+}
+.d8 p{margin-left: 3px; margin-right: 340px;}
+.d9{
+    display: flex;
+    
+    border-bottom: 1px solid rgb(117, 116, 116);
+}
+.d9 p{margin-left: 3px; margin-right: 320px;}
+.d10{
+    display: flex;
+    
+}
+.d10 p{margin-left: 3px; margin-right: 409px;}
+
+
+/* vesti */
+
+.vesti{
+    background-color: rgb(244, 198, 255);
+    width: 81%;
+    border-radius: 10px;
+    margin: 30px auto;
+    height: 10vh;
+    font-size: 20px;
+    font-weight: bold;
+    padding:  29px 60px;
+}
+
+/* submit */
+
+.dugme {
+  background-color: rgb(197, 93, 197);	
+  border: none;
+  border-radius: 2px;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  text-shadow: 2px 1px rgb(78, 78, 78);
+}
+
+.dugme:hover {
+	background-color: rgba(218, 28, 208, 0.733);
+	cursor: pointer;
+}
+table, th, td {
+	border: 2px solid #d05db4;
+	border-collapse: collapse;
+}
+
+/*Tabele*/
+
+table,thead,tbody {
+        margin-left: auto;
+        margin-right: auto;
+	font-size:15px;
+	background-color: transparent;
+        width:900px; 
+        height:300%;
+	text-align: center; 
+	vertical-align: middle;
+}
+
+.th {  
+height:35px; 
+text-align: center; 
+vertical-align: middle;
+background-color: snow;
+}
+
+.td {
+padding:10px;
+text-align: center; 
+vertical-align: middle; 
+background-color: transparent;
+}
