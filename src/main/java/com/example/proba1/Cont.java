@@ -13,21 +13,22 @@ public class Cont {
 
     Logged log;  // ulogovani korisnik ( id, pass, username, role )
 
-    User user; // user koji pokusa da se loguje
+    User user; 
 
-    Data dt; // veza sa bazom
+    Data dt;
 
-    User userr; // student
+    User userr;
 
-    AdminUser admin; // admin
+    AdminUser admin; 
 
-    Profesor profesor; //  profesor
+    Profesor profesor;
 
-    String IDprijave = "";   // id prijave ispita
+    String IDprijave = "";  
 
     String idProfesora = "";
 
-    // akcija : logovanje
+  
+
     @PostMapping("/checker")
     public String login(@ModelAttribute LoginDTO loginDTO, BindingResult errors, Model model){
 
@@ -96,8 +97,7 @@ public class Cont {
         return "forgottenpassword";
     }
 
-    /**
-     * Dodavanje profesora u bazu, (admin)
+   /**
      * @param profesorDTO idpredavaca ime prezime username password
      * @param errors
      * @param model
@@ -142,11 +142,7 @@ public class Cont {
 */
 
     /**
-     * Dodavanje profesora u bazu, dodavanje predmeta u bazu (admin)
-     * @param profesorDTO idpredavaca ime prezime username password
-     * @param errors
-     * @param model
-     * @return ostaje na istoj stranici
+     
      */
 
     @PostMapping("/dodajprof")
@@ -214,9 +210,8 @@ public class Cont {
         return "dodajprofesore";
     }
 
-    /***
-     * Update profesora
-     */
+    
+
 
     @GetMapping("/updateprofesora")
     public String updateprofesora(Model model)
@@ -254,13 +249,6 @@ public class Cont {
         return "redirect:/updateprofesorane";
     }
 
-    /**
-     * Dodavanje studenata u bazu (admin)
-     * @param studentDTO student
-     * @param errors
-     * @param model
-     * @return  ostaje na istoj stranici
-     */
 
     @PostMapping("/registracijastudenta")
     public String dodavanjeStudentaUBazu(@ModelAttribute StudentDTO studentDTO,BindingResult errors,Model model)
@@ -308,14 +296,7 @@ public class Cont {
         return "indeksregister";
     }
 
-    /**
-     * Brise studenta ili profesora
-     * @param userDeleteDTO
-     * @param errors
-     * @param model
-     * @return
-     */
-
+    
     @PostMapping("/brisanjepodatka")
     public String brisanjeUser(@ModelAttribute UserDeleteDTO userDeleteDTO,BindingResult errors,Model model)
     {
@@ -351,11 +332,6 @@ public class Cont {
         return "/brisanje";
     }
 
-    /**
-     * Ispis profesora
-     * @param model
-     * @return
-     */
 
     @GetMapping("/ispisiprofesore")
     public String funnnnnnnnn(Model model)
@@ -368,7 +344,7 @@ public class Cont {
     }
 
     /**
-     * Ispisuje prijave ispita  (profesor)
+     *
      * @param model
      * @return
      */
@@ -384,7 +360,7 @@ public class Cont {
     }
 
     /**
-     * Prijava ispita (student)
+     * Prijava
      * @param model
      * @return
      */
@@ -402,7 +378,7 @@ public class Cont {
         return "predmetiprijava";
     }
 
-    // uzima sifru predmeta koga smo odabrali klikom na dugme
+    
     @PostMapping("/prijaviispit")
     public String prijaviIspitFun(@RequestParam(value="sifrapredmeta") String sifrapredmeta,Model model)
     {
@@ -413,10 +389,7 @@ public class Cont {
         return "redirect:/eprijava";
     }
 
-    /** Dodeljivanje ocena (profesor)
-     * @param model
-     * @return
-     */
+    
 
     @GetMapping("/dajocenu")
     public String dajOcenu(Model model)
@@ -455,7 +428,7 @@ public class Cont {
     }
 
     /**
-     * Strana za logovanje
+     * Strana
      * @param model
      * @return
      */
@@ -485,7 +458,7 @@ public class Cont {
     }
 
     /**
-     * Pocetna strana profesora
+     * Pocetna
      * @param model
      * @return
      */
@@ -500,7 +473,7 @@ public class Cont {
     }
 
     /**
-     * Pocetna strana admina
+     * Pocetna
      * @param model
      * @return
      */
