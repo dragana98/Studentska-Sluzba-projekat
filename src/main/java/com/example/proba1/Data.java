@@ -39,8 +39,7 @@ public class Data {
     }
 
     /**
-     *              Logovanje
-     * @param username username korisnika
+     *              
      * @param password sifra korisnika
      * @return User
      */
@@ -63,7 +62,7 @@ public class Data {
     }
 
     /**
-     * Funkcija vraca ulogovanog studenta
+     * 
      * @param username username ulogovanog korisnika
      * @return student
      */
@@ -86,7 +85,7 @@ public class Data {
     }
 
     /**
-     * Funkcija vraca ulogovanog admina
+     * 
      * @param username username ulogovanog korisnika
      * @return admin
      */
@@ -109,7 +108,7 @@ public class Data {
     }
 
     /**
-     * Funkcija vraca ulogovanog profesora
+     * 
      * @param username username korisnika koji se ulogovao
      * @return profesor
      */
@@ -132,7 +131,7 @@ public class Data {
     }
 
     /**
-     * Salje zahtev za novu sifru
+     * Salje zahtev
      * @param username trenutni korisnik
      *
      */
@@ -152,7 +151,7 @@ public class Data {
     }
 
     /**
-     * Brise studente(User) ili profesore iz baze
+
      * iz tabele student/predavaci  i users
      * @param role STUDENT/PROFESOR
      *
@@ -248,7 +247,7 @@ public class Data {
     }
 
     /**
-     * Dodaje profesora u bazu ako ne postoji
+     * Dodaje 
      * @param ime
      * @param prezime
      * @param idpredavaca
@@ -307,7 +306,7 @@ public class Data {
     }
 
     /**
-     * Dodaje studenta u bazu ako ne postoji
+     * Dodaje studenta
      * @param ime
      * @param prezime
      * @param brindeksa
@@ -373,7 +372,7 @@ public class Data {
     }
 
     /**
-     * Daje listu profesora
+     * 
      * @return
      */
     public ArrayList<ProfesorDTO> profesoriJson()
@@ -420,7 +419,7 @@ public class Data {
     }
 
     /**
-     * Ispisuje prijave
+     * 
      * @return
      */
     public ArrayList<PrijaveDTO> prijaveIspis()
@@ -455,7 +454,7 @@ public class Data {
     }
 
     /**
-     * Ispisuje predmete koji se mogu prijaviti za polaganje
+     * 
      * @return
      */
     public ArrayList<PredmetiPrijavaDTO> predmetizaprijavu()
@@ -490,7 +489,7 @@ public class Data {
     }
 
     /**
-     * Ispisuje predmete studenta iz baze
+     * Ispisuje
      * @return
      */
     public ArrayList<PredmetiStudentaDTO> predmetiStudenta()
@@ -570,7 +569,7 @@ public class Data {
     }
 
     /**
-     * Prijavljivanje ispita
+     * 
      * @param brindeksa
      * @param sifrapredmeta
      */
@@ -611,7 +610,7 @@ public class Data {
     }
 
     /**
-     * Ispisuje ocene
+     * Ispisuje 
      * @return
      */
     public ArrayList<GotoviIspitiDTO> prijaveIspisOcene()
@@ -645,7 +644,7 @@ public class Data {
     }
 
     /**
-     * dodeljivanje ocene studentu za odedjeni predmet
+     * 
      * @param idprijave
      * @param ocena
      */
@@ -697,7 +696,7 @@ public class Data {
 
     }
 
-    /** Ispisuje ispite studenta
+    /** 
      * @param brindeksa
      * @return
      */
